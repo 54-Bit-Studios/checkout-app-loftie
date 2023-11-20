@@ -19568,14 +19568,19 @@ ${errorInfo.componentStack}`);
     throw new ExtensionHasNoMethodError("applyCartLinesChange", api.extension.target);
   }
 
+  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/hooks/settings.mjs
+  function useSettings() {
+    const settings = useSubscription(useApi().settings);
+    return settings;
+  }
+
   // extensions/checkout-upsell-product/src/Checkout.tsx
   var import_react19 = __toESM(require_react());
   var import_jsx_runtime4 = __toESM(require_jsx_runtime());
   var Checkout_default = reactExtension(
-    "purchase.checkout.cart-line-list.render-after",
+    "purchase.checkout.block.render",
     () => /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Extension, {})
   );
-  var variantId = "gid://shopify/ProductVariant/39854280736832";
   function Extension() {
     var _a, _b, _c, _d;
     const { query } = useApi();
@@ -19583,6 +19588,8 @@ ${errorInfo.componentStack}`);
     const [isSelected, setIsSelected] = (0, import_react19.useState)(false);
     const cartLines = useCartLines();
     const applyCartLineChange = useApplyCartLinesChange();
+    const settings = useSettings();
+    const variantId = settings.selected_variant;
     (0, import_react19.useEffect)(() => {
       function getVariantData() {
         return __async(this, null, function* () {
@@ -19613,7 +19620,9 @@ ${errorInfo.componentStack}`);
           }
         });
       }
-      getVariantData();
+      if (variantId) {
+        getVariantData();
+      }
     }, []);
     (0, import_react19.useEffect)(() => {
       var _a2;
@@ -19647,7 +19656,7 @@ ${errorInfo.componentStack}`);
           spacing: "base"
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Heading2, { level: 2, children: "Protect your order:" }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Heading2, { level: 2, children: settings.shipping_insurance_title }),
       /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
         BlockSpacer2,
         {
@@ -19682,7 +19691,7 @@ ${errorInfo.componentStack}`);
                     borderWidth: "base"
                   }
                 ),
-                /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(BlockStack2, { children: [
+                /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(BlockStack2, { spacing: "base", children: [
                   /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(Text2, { children: [
                     variantData.product.title,
                     " - ",
@@ -19691,7 +19700,8 @@ ${errorInfo.componentStack}`);
                   /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(Text2, { children: [
                     "$",
                     variantData.price.amount
-                  ] })
+                  ] }),
+                  /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Text2, { size: "small", children: settings.shipping_insurance_description })
                 ] })
               ]
             }

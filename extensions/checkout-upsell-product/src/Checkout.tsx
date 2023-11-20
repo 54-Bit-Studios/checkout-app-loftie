@@ -1,5 +1,4 @@
 import {
-  Banner,
   useApi,
   reactExtension,
   InlineLayout,
@@ -12,18 +11,17 @@ import {
   BlockSpacer,
   Divider,
   useCartLines,
-  useApplyCartLinesChange
+  useApplyCartLinesChange,
+  useSettings
 
 } from '@shopify/ui-extensions-react/checkout';
 import { title } from 'process';
 import { useEffect, useState } from 'react';
 
 export default reactExtension(
-  'purchase.checkout.cart-line-list.render-after',
+  'purchase.checkout.block.render',
   () => <Extension />,
 );
-
-const variantId = "gid://shopify/ProductVariant/39854280736832";
 
 interface VariantData {
   title: string;
@@ -52,6 +50,9 @@ function Extension() {
 
   const cartLines = useCartLines();
   const applyCartLineChange = useApplyCartLinesChange();
+
+  const settings = useSettings();
+  const variantId = settings.selected_variant as string;
 
   useEffect(() => {
     async function getVariantData(){
@@ -82,7 +83,9 @@ function Extension() {
         setVariant(queryResult.data.node)
       }
     }
-    getVariantData();
+    if(variantId) {
+      getVariantData();
+    }
   }, []);
 
   useEffect(() => {
@@ -116,7 +119,7 @@ function Extension() {
     <BlockSpacer
     spacing={"base"}/>
     <Heading level={2}>
-      Protect your order:
+      {settings.shipping_insurance_title}
     </Heading>
     <BlockSpacer
     spacing={"base"}/>
@@ -135,12 +138,15 @@ function Extension() {
       border={"base"}
       borderWidth={"base"}
       />
-      <BlockStack>
+      <BlockStack spacing={"base"}>
         <Text>
           {variantData.product.title} - {variantData.title}
         </Text>
         <Text>
           ${variantData.price.amount}
+        </Text>
+        <Text size="small">
+          {settings.shipping_insurance_description}
         </Text>
       </BlockStack>
     </InlineLayout>

@@ -16,7 +16,7 @@ handle = "checkout-upsell-product"
 
 [[extensions.targeting]]
 module = "./src/Checkout.tsx"
-target = "purchase.checkout.cart-line-list.render-after"
+target = "purchase.checkout.block.render"
 
 [extensions.capabilities]
 # Gives your extension access to directly query Shopify’s storefront API.
@@ -48,4 +48,14 @@ api_access = true
  key = "shipping_insurance_title"
  type = "single_line_text_field"
  name = "Shipping Insurance title"
+
+  [[extensions.settings.fields]]
+ key = "shipping_insurance_description"
+ type = "single_line_text_field"
+ name = "Shipping Insurance Descfiption text"
+
+ [[extensions.settings.fields]]
+ key = "selected_variant"
+ type = "variant_reference"
+ name = "Selected Variant"
 
