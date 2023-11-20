@@ -2429,9 +2429,9 @@
         module.exports = function $$$reconciler($$$hostConfig) {
           var exports2 = {};
           "use strict";
-          var React2 = require_react();
+          var React = require_react();
           var Scheduler = require_scheduler();
-          var ReactSharedInternals = React2.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+          var ReactSharedInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
           var suppressWarning = false;
           function setSuppressWarning(newSuppressWarning) {
             {
@@ -2495,7 +2495,7 @@
           var HostPortal = 4;
           var HostComponent = 5;
           var HostText = 6;
-          var Fragment = 7;
+          var Fragment2 = 7;
           var Mode = 8;
           var ContextConsumer = 9;
           var ContextProvider = 10;
@@ -2635,7 +2635,7 @@
                 return "DehydratedFragment";
               case ForwardRef:
                 return getWrappedName$1(type, type.render, "ForwardRef");
-              case Fragment:
+              case Fragment2:
                 return "Fragment";
               case HostComponent:
                 return type;
@@ -6229,7 +6229,7 @@
             }
           }
           var fakeInternalInstance = {};
-          var emptyRefsObject = new React2.Component().refs;
+          var emptyRefsObject = new React.Component().refs;
           var didWarnAboutStateAssignmentForComponent;
           var didWarnAboutUninitializedState;
           var didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate;
@@ -7053,7 +7053,7 @@
               }
             }
             function updateFragment2(returnFiber, current2, fragment, lanes, key) {
-              if (current2 === null || current2.tag !== Fragment) {
+              if (current2 === null || current2.tag !== Fragment2) {
                 var created = createFiberFromFragment(fragment, returnFiber.mode, lanes, key);
                 created.return = returnFiber;
                 return created;
@@ -7456,7 +7456,7 @@
                 if (child.key === key) {
                   var elementType = element.type;
                   if (elementType === REACT_FRAGMENT_TYPE) {
-                    if (child.tag === Fragment) {
+                    if (child.tag === Fragment2) {
                       deleteRemainingChildren(returnFiber, child.sibling);
                       var existing = useFiber(child, element.props.children);
                       existing.return = returnFiber;
@@ -11633,7 +11633,7 @@
                 var _resolvedProps2 = workInProgress2.elementType === type ? _unresolvedProps2 : resolveDefaultProps(type, _unresolvedProps2);
                 return updateForwardRef(current2, workInProgress2, type, _resolvedProps2, renderLanes2);
               }
-              case Fragment:
+              case Fragment2:
                 return updateFragment(current2, workInProgress2, renderLanes2);
               case Mode:
                 return updateMode(current2, workInProgress2, renderLanes2);
@@ -12074,7 +12074,7 @@
               case SimpleMemoComponent:
               case FunctionComponent:
               case ForwardRef:
-              case Fragment:
+              case Fragment2:
               case Mode:
               case Profiler:
               case ContextConsumer:
@@ -16840,7 +16840,7 @@
             return fiber;
           }
           function createFiberFromFragment(elements, mode, lanes, key) {
-            var fiber = createFiber(Fragment, elements, key, mode);
+            var fiber = createFiber(Fragment2, elements, key, mode);
             fiber.lanes = lanes;
             return fiber;
           }
@@ -17540,7 +17540,7 @@
       if (true) {
         (function() {
           "use strict";
-          var React2 = require_react();
+          var React = require_react();
           var REACT_ELEMENT_TYPE = Symbol.for("react.element");
           var REACT_PORTAL_TYPE = Symbol.for("react.portal");
           var REACT_FRAGMENT_TYPE = Symbol.for("react.fragment");
@@ -17566,7 +17566,7 @@
             }
             return null;
           }
-          var ReactSharedInternals = React2.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+          var ReactSharedInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
           function error(format) {
             {
               {
@@ -18423,9 +18423,6 @@
     }
   });
 
-  // extensions/pre-purchase-product-offer/src/Checkout.jsx
-  var import_react20 = __toESM(require_react());
-
   // node_modules/@remote-ui/rpc/build/esm/memory.mjs
   function isBasicObject(value) {
     if (value == null || typeof value !== "object")
@@ -19124,14 +19121,14 @@
   // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/extension.mjs
   var extension = createExtensionRegistrationFunction();
 
-  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/Banner/Banner.mjs
-  var Banner = createRemoteComponent("Banner");
+  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/BlockSpacer/BlockSpacer.mjs
+  var BlockSpacer = createRemoteComponent("BlockSpacer");
 
   // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/BlockStack/BlockStack.mjs
   var BlockStack = createRemoteComponent("BlockStack");
 
-  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/Button/Button.mjs
-  var Button = createRemoteComponent("Button");
+  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/Checkbox/Checkbox.mjs
+  var Checkbox = createRemoteComponent("Checkbox");
 
   // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/Divider/Divider.mjs
   var Divider = createRemoteComponent("Divider");
@@ -19145,11 +19142,8 @@
   // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/InlineLayout/InlineLayout.mjs
   var InlineLayout = createRemoteComponent("InlineLayout");
 
-  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/SkeletonImage/SkeletonImage.mjs
-  var SkeletonImage = createRemoteComponent("SkeletonImage");
-
-  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/SkeletonText/SkeletonText.mjs
-  var SkeletonText = createRemoteComponent("SkeletonText");
+  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/Pressable/Pressable.mjs
+  var Pressable = createRemoteComponent("Pressable");
 
   // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/Text/Text.mjs
   var Text = createRemoteComponent("Text");
@@ -19482,16 +19476,14 @@ ${errorInfo.componentStack}`);
     }
   };
 
-  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/Banner/Banner.mjs
-  var Banner2 = createRemoteReactComponent(Banner);
+  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/BlockSpacer/BlockSpacer.mjs
+  var BlockSpacer2 = createRemoteReactComponent(BlockSpacer);
 
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/BlockStack/BlockStack.mjs
   var BlockStack2 = createRemoteReactComponent(BlockStack);
 
-  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/Button/Button.mjs
-  var Button2 = createRemoteReactComponent(Button, {
-    fragmentProps: ["overlay"]
-  });
+  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/Checkbox/Checkbox.mjs
+  var Checkbox2 = createRemoteReactComponent(Checkbox);
 
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/Divider/Divider.mjs
   var Divider2 = createRemoteReactComponent(Divider);
@@ -19505,17 +19497,16 @@ ${errorInfo.componentStack}`);
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/InlineLayout/InlineLayout.mjs
   var InlineLayout2 = createRemoteReactComponent(InlineLayout);
 
-  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/SkeletonImage/SkeletonImage.mjs
-  var SkeletonImage2 = createRemoteReactComponent(SkeletonImage);
-
-  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/SkeletonText/SkeletonText.mjs
-  var SkeletonText2 = createRemoteReactComponent(SkeletonText);
+  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/Pressable/Pressable.mjs
+  var Pressable2 = createRemoteReactComponent(Pressable, {
+    fragmentProps: ["overlay"]
+  });
 
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/Text/Text.mjs
   var Text2 = createRemoteReactComponent(Text);
 
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/hooks/api.mjs
-  var import_react18 = __toESM(require_react(), 1);
+  var import_react17 = __toESM(require_react(), 1);
 
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/errors.mjs
   var CheckoutUIExtensionError = class extends Error {
@@ -19533,7 +19524,7 @@ ${errorInfo.componentStack}`);
 
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/hooks/api.mjs
   function useApi(_target) {
-    const api = (0, import_react18.useContext)(ExtensionApiContext);
+    const api = (0, import_react17.useContext)(ExtensionApiContext);
     if (api == null) {
       throw new CheckoutUIExtensionError("You can only call this hook when running as a UI extension.");
     }
@@ -19541,10 +19532,10 @@ ${errorInfo.componentStack}`);
   }
 
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/hooks/subscription.mjs
-  var import_react19 = __toESM(require_react(), 1);
+  var import_react18 = __toESM(require_react(), 1);
   function useSubscription(subscription) {
-    const [, setValue] = (0, import_react19.useState)(subscription.current);
-    (0, import_react19.useEffect)(() => {
+    const [, setValue] = (0, import_react18.useState)(subscription.current);
+    (0, import_react18.useEffect)(() => {
       let didUnsubscribe = false;
       const checkForUpdates = (newValue) => {
         if (didUnsubscribe) {
@@ -19577,179 +19568,137 @@ ${errorInfo.componentStack}`);
     throw new ExtensionHasNoMethodError("applyCartLinesChange", api.extension.target);
   }
 
-  // extensions/pre-purchase-product-offer/src/Checkout.jsx
+  // extensions/checkout-upsell-product/src/Checkout.tsx
+  var import_react19 = __toESM(require_react());
   var import_jsx_runtime4 = __toESM(require_jsx_runtime());
-  var Checkout_default = reactExtension("purchase.checkout.block.render", () => /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(App, {}));
-  function App() {
-    const { query, i18n } = useApi();
-    const applyCartLinesChange = useApplyCartLinesChange();
-    const [products, setProducts] = (0, import_react20.useState)([]);
-    const [loading, setLoading] = (0, import_react20.useState)(false);
-    const [adding, setAdding] = (0, import_react20.useState)(false);
-    const [showError, setShowError] = (0, import_react20.useState)(false);
-    const lines = useCartLines();
-    (0, import_react20.useEffect)(() => {
-      fetchProducts();
-    }, []);
-    (0, import_react20.useEffect)(() => {
-      if (showError) {
-        const timer = setTimeout(() => setShowError(false), 3e3);
-        return () => clearTimeout(timer);
-      }
-    }, [showError]);
-    function handleAddToCart(variantId) {
-      return __async(this, null, function* () {
-        setAdding(true);
-        const result = yield applyCartLinesChange({
-          type: "addCartLine",
-          merchandiseId: variantId,
-          quantity: 1
-        });
-        setAdding(false);
-        if (result.type === "error") {
-          setShowError(true);
-          console.error(result.message);
-        }
-      });
-    }
-    function fetchProducts() {
-      return __async(this, null, function* () {
-        setLoading(true);
-        try {
-          const { data } = yield query(
-            `query ($first: Int!) {
-          products(first: $first) {
-            nodes {
-              id
+  var Checkout_default = reactExtension(
+    "purchase.checkout.cart-line-list.render-after",
+    () => /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Extension, {})
+  );
+  var variantId = "gid://shopify/ProductVariant/39854280736832";
+  function Extension() {
+    var _a, _b, _c, _d;
+    const { query } = useApi();
+    const [variantData, setVariant] = (0, import_react19.useState)(null);
+    const [isSelected, setIsSelected] = (0, import_react19.useState)(false);
+    const cartLines = useCartLines();
+    const applyCartLineChange = useApplyCartLinesChange();
+    (0, import_react19.useEffect)(() => {
+      function getVariantData() {
+        return __async(this, null, function* () {
+          const queryResult = yield query(`{
+        node(id: "${variantId}"){
+          ... on ProductVariant {
+            title
+            price {
+              amount
+              currencyCode
+            }
+            image {
+              url
+              altText
+            }
+            product {
               title
-              images(first:1){
-                nodes {
-                  url
-                }
-              }
-              variants(first: 1) {
-                nodes {
-                  id
-                  price {
-                    amount
-                  }
-                }
+              featuredImage {
+                url
+                altText
               }
             }
           }
-        }`,
-            {
-              variables: { first: 5 }
-            }
-          );
-          setProducts(data.products.nodes);
-        } catch (error) {
-          console.error(error);
-        } finally {
-          setLoading(false);
         }
-      });
-    }
-    if (loading) {
-      return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(LoadingSkeleton, {});
-    }
-    if (!loading && products.length === 0) {
-      return null;
-    }
-    const productsOnOffer = getProductsOnOffer(lines, products);
-    if (!productsOnOffer.length) {
-      return null;
-    }
-    return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
-      ProductOffer,
-      {
-        product: productsOnOffer[0],
-        i18n,
-        adding,
-        handleAddToCart,
-        showError
+      }`);
+          if (queryResult.data) {
+            setVariant(queryResult.data.node);
+          }
+        });
       }
-    );
-  }
-  function LoadingSkeleton() {
-    return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(BlockStack2, { spacing: "loose", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Divider2, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Heading2, { level: 2, children: "You might also like" }),
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(BlockStack2, { spacing: "loose", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(
-        InlineLayout2,
-        {
-          spacing: "base",
-          columns: [64, "fill", "auto"],
-          blockAlignment: "center",
-          children: [
-            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(SkeletonImage2, { aspectRatio: 1 }),
-            /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(BlockStack2, { spacing: "none", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(SkeletonText2, { inlineSize: "large" }),
-              /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(SkeletonText2, { inlineSize: "small" })
-            ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Button2, { kind: "secondary", disabled: true, children: "Add" })
-          ]
+      getVariantData();
+    }, []);
+    (0, import_react19.useEffect)(() => {
+      var _a2;
+      if (isSelected) {
+        applyCartLineChange({
+          type: "addCartLine",
+          quantity: 1,
+          merchandiseId: variantId
+        });
+      } else {
+        const cartLineId = (_a2 = cartLines.find(
+          (cartLine) => cartLine.merchandise.id === variantId
+        )) == null ? void 0 : _a2.id;
+        if (cartLineId) {
+          applyCartLineChange({
+            type: "removeCartLine",
+            quantity: 1,
+            id: cartLineId
+          });
         }
-      ) })
-    ] });
-  }
-  function getProductsOnOffer(lines, products) {
-    const cartLineProductVariantIds = lines.map((item) => item.merchandise.id);
-    return products.filter((product) => {
-      const isProductVariantInCart = product.variants.nodes.some(
-        ({ id }) => cartLineProductVariantIds.includes(id)
-      );
-      return !isProductVariantInCart;
-    });
-  }
-  function ProductOffer({ product, i18n, adding, handleAddToCart, showError }) {
-    var _a, _b;
-    const { images, title, variants } = product;
-    const renderPrice = i18n.formatCurrency(variants.nodes[0].price.amount);
-    const imageUrl = (_b = (_a = images.nodes[0]) == null ? void 0 : _a.url) != null ? _b : "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_medium.png?format=webp&v=1530129081";
-    return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(BlockStack2, { spacing: "loose", children: [
+      }
+    }, [isSelected]);
+    if (!variantData)
+      return null;
+    console.log(variantData);
+    return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(import_jsx_runtime4.Fragment, { children: [
       /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Divider2, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Heading2, { level: 2, children: "You might also like" }),
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(BlockStack2, { spacing: "loose", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(
-        InlineLayout2,
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
+        BlockSpacer2,
         {
-          spacing: "base",
-          columns: [64, "fill", "auto"],
-          blockAlignment: "center",
-          children: [
-            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
-              Image2,
-              {
-                border: "base",
-                borderWidth: "base",
-                borderRadius: "loose",
-                source: imageUrl,
-                description: title,
-                aspectRatio: 1
-              }
-            ),
-            /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(BlockStack2, { spacing: "none", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Text2, { size: "medium", emphasis: "strong", children: title }),
-              /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Text2, { appearance: "subdued", children: renderPrice })
-            ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
-              Button2,
-              {
-                kind: "secondary",
-                loading: adding,
-                accessibilityLabel: `Add ${title} to cart`,
-                onPress: () => handleAddToCart(variants.nodes[0].id),
-                children: "Add"
-              }
-            )
-          ]
+          spacing: "base"
         }
-      ) }),
-      showError && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(ErrorBanner, {})
+      ),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Heading2, { level: 2, children: "Protect your order:" }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
+        BlockSpacer2,
+        {
+          spacing: "base"
+        }
+      ),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
+        Pressable2,
+        {
+          onPress: () => setIsSelected(!isSelected),
+          children: /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(
+            InlineLayout2,
+            {
+              blockAlignment: "center",
+              spacing: ["base", "base"],
+              columns: ["auto", 80, "fill"],
+              padding: "base",
+              children: [
+                /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
+                  Checkbox2,
+                  {
+                    checked: isSelected
+                  }
+                ),
+                /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
+                  Image2,
+                  {
+                    source: ((_a = variantData.image) == null ? void 0 : _a.url) || ((_b = variantData.product.featuredImage) == null ? void 0 : _b.url),
+                    accessibilityDescription: ((_c = variantData.image) == null ? void 0 : _c.url) || ((_d = variantData.product.featuredImage) == null ? void 0 : _d.altText),
+                    borderRadius: "base",
+                    border: "base",
+                    borderWidth: "base"
+                  }
+                ),
+                /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(BlockStack2, { children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(Text2, { children: [
+                    variantData.product.title,
+                    " - ",
+                    variantData.title
+                  ] }),
+                  /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(Text2, { children: [
+                    "$",
+                    variantData.price.amount
+                  ] })
+                ] })
+              ]
+            }
+          )
+        }
+      )
     ] });
-  }
-  function ErrorBanner() {
-    return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Banner2, { status: "critical", children: "There was an issue adding this product. Please try again." });
   }
 })();
-//# sourceMappingURL=pre-purchase-product-offer.js.map
+//# sourceMappingURL=checkout-upsell-product.js.map

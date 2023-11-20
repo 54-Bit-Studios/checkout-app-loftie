@@ -7,16 +7,16 @@ api_version = "2023-10"
 
 [[extensions]]
 type = "ui_extension"
-name = "pre-purchase-product-offer"
-handle = "pre-purchase-product-offer"
+name = "checkout-upsell-product"
+handle = "checkout-upsell-product"
 
 # Controls where in Shopify your extension will be injected,
 # and the file that contains your extension’s source code. Learn more:
 # https://shopify.dev/docs/api/checkout-ui-extensions/unstable/extension-targets-overview
 
 [[extensions.targeting]]
-module = "./src/Checkout.jsx"
-target = "purchase.checkout.block.render"
+module = "./src/Checkout.tsx"
+target = "purchase.checkout.cart-line-list.render-after"
 
 [extensions.capabilities]
 # Gives your extension access to directly query Shopify’s storefront API.
@@ -43,9 +43,9 @@ api_access = true
 # your extension. Learn more:
 # https://shopify.dev/docs/api/checkout-ui-extensions/unstable/configuration#settings-definition
 
-# [extensions.settings]
-# [[extensions.settings.fields]]
-# key = "banner_title"
-# type = "single_line_text_field"
-# name = "Banner title"
-# description = "Enter a title for the banner"
+[extensions.settings]
+ [[extensions.settings.fields]]
+ key = "shipping_insurance_title"
+ type = "single_line_text_field"
+ name = "Shipping Insurance title"
+
