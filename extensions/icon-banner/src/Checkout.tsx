@@ -21,18 +21,18 @@ function Extension() {
 
     return(
         <InlineLayout spacing='base' columns={['33.3%', '33.3%', '33.3%']}>
-          <BlockLayout blockAlignment='center' inlineAlignment='center'>
-              <Icon source={icon_1} size='base' appearance="subdued"/>
-              <Heading level={2}>{icon_title_1}</Heading>
-          </BlockLayout>
-          <BlockLayout  blockAlignment='center' inlineAlignment='center'>
-              <Icon source={icon_2} size='base'  appearance="subdued"/>
-              <Heading level={2}>{icon_title_2}</Heading>
-          </BlockLayout>
-          <BlockLayout blockAlignment='center' inlineAlignment='center'>
-              <Icon source={icon_3} size='base'  appearance="subdued"/>
-              <Heading level={2}>{icon_title_3}</Heading>
-          </BlockLayout>
-      </InlineLayout>
+            <BlockLayout blockAlignment='center' inlineAlignment='center'>
+                <Icon source={icon_1} size='base' appearance="subdued"/>
+                <Heading level={2}>{icon_title_1}</Heading>
+            </BlockLayout>
+            <BlockLayout  blockAlignment='center' inlineAlignment='center'>
+                <Icon source={icon_2} size='base'  appearance="subdued"/>
+                <Heading level={2}>{icon_title_2}</Heading>
+            </BlockLayout>
+            <BlockLayout blockAlignment='center' inlineAlignment='center'>
+                <Icon source={icon_3} size='base'  appearance="subdued"/>
+                <Heading level={2}>{icon_title_3}</Heading>
+            </BlockLayout>
+        </InlineLayout>
     )
 };

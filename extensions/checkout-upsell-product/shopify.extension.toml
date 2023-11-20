@@ -52,7 +52,7 @@ api_access = true
   [[extensions.settings.fields]]
  key = "shipping_insurance_description"
  type = "single_line_text_field"
- name = "Shipping Insurance Descfiption text"
+ name = "Shipping Insurance Description text"
 
  [[extensions.settings.fields]]
  key = "selected_variant"
