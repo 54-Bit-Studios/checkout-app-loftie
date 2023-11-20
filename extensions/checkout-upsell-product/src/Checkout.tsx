@@ -15,6 +15,7 @@ import {
   useSettings
 
 } from '@shopify/ui-extensions-react/checkout';
+
 import { title } from 'process';
 import { useEffect, useState } from 'react';
 
@@ -112,7 +113,6 @@ function Extension() {
 
   if(!variantData) return null;
 
-  console.log(variantData);
   return (
     <>
     <Divider/>
