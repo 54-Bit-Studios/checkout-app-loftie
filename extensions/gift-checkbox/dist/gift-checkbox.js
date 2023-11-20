@@ -19574,7 +19574,7 @@ ${errorInfo.componentStack}`);
         namespace: metafieldNamespace,
         key: metafieldKey,
         valueType: "string",
-        value: "TRUE --- add SKU:'Overbox'"
+        value: "TRUE"
       }).then((response) => {
         console.log("Metafield update response:", response);
         console.log("Metafield updated successfully");
@@ -19585,3 +19585,4 @@ ${errorInfo.componentStack}`);
     return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(BlockStack2, { children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Checkbox2, { checked, onChange: handleChange, children: "Is this a gift?" }) });
   }
 })();
+//# sourceMappingURL=gift-checkbox.js.map

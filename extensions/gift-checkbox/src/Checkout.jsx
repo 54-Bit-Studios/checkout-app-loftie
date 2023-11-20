@@ -34,7 +34,7 @@ function Extension() {
         namespace: metafieldNamespace,
         key: metafieldKey,
         valueType: "string",
-        value: "TRUE --- add SKU:'Overbox'",
+        value: "TRUE",
       }).then((response) => {
         console.log('Metafield update response:', response);
         console.log('Metafield updated successfully');
