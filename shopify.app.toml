@@ -1,3 +1,28 @@
-# This file stores configurations for your Shopify app.
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
+name = "checkout-app-loftie"
+client_id = "29bad099c5ce55509ecd8a6c53af6b42"
+application_url = "https://advantage-non-floor-bermuda.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
 scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://advantage-non-floor-bermuda.trycloudflare.com/auth/callback",
+  "https://advantage-non-floor-bermuda.trycloudflare.com/auth/shopify/callback",
+  "https://advantage-non-floor-bermuda.trycloudflare.com/api/auth/callback",
+  "https://advantage-non-floor-bermuda.trycloudflare.com/.shopify/graphiql/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-10"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "54-bit-studios.myshopify.com"
