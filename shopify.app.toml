@@ -2,7 +2,7 @@
 
 name = "checkout-app-loftie"
 client_id = "29bad099c5ce55509ecd8a6c53af6b42"
-application_url = "https://correction-pharmacies-shaw-hypothetical.trycloudflare.com"
+application_url = "https://dead-destination-trembl-major.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,10 +11,10 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://correction-pharmacies-shaw-hypothetical.trycloudflare.com/auth/callback",
-  "https://correction-pharmacies-shaw-hypothetical.trycloudflare.com/auth/shopify/callback",
-  "https://correction-pharmacies-shaw-hypothetical.trycloudflare.com/api/auth/callback",
-  "https://correction-pharmacies-shaw-hypothetical.trycloudflare.com/.shopify/graphiql/auth/callback"
+  "https://dead-destination-trembl-major.trycloudflare.com/auth/callback",
+  "https://dead-destination-trembl-major.trycloudflare.com/auth/shopify/callback",
+  "https://dead-destination-trembl-major.trycloudflare.com/api/auth/callback",
+  "https://dead-destination-trembl-major.trycloudflare.com/.shopify/graphiql/auth/callback"
 ]
 
 [webhooks]

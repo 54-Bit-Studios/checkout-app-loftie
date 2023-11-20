@@ -1133,7 +1133,7 @@
             }
             return dispatcher.useContext(Context);
           }
-          function useState2(initialState) {
+          function useState3(initialState) {
             var dispatcher = resolveDispatcher();
             return dispatcher.useState(initialState);
           }
@@ -1161,7 +1161,7 @@
             var dispatcher = resolveDispatcher();
             return dispatcher.useCallback(callback, deps);
           }
-          function useMemo2(create, deps) {
+          function useMemo3(create, deps) {
             var dispatcher = resolveDispatcher();
             return dispatcher.useMemo(create, deps);
           }
@@ -1932,10 +1932,10 @@
           exports.useImperativeHandle = useImperativeHandle;
           exports.useInsertionEffect = useInsertionEffect;
           exports.useLayoutEffect = useLayoutEffect;
-          exports.useMemo = useMemo2;
+          exports.useMemo = useMemo3;
           exports.useReducer = useReducer;
           exports.useRef = useRef2;
-          exports.useState = useState2;
+          exports.useState = useState3;
           exports.useSyncExternalStore = useSyncExternalStore;
           exports.useTransition = useTransition;
           exports.version = ReactVersion;
@@ -2429,9 +2429,9 @@
         module.exports = function $$$reconciler($$$hostConfig) {
           var exports2 = {};
           "use strict";
-          var React = require_react();
+          var React2 = require_react();
           var Scheduler = require_scheduler();
-          var ReactSharedInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+          var ReactSharedInternals = React2.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
           var suppressWarning = false;
           function setSuppressWarning(newSuppressWarning) {
             {
@@ -6229,7 +6229,7 @@
             }
           }
           var fakeInternalInstance = {};
-          var emptyRefsObject = new React.Component().refs;
+          var emptyRefsObject = new React2.Component().refs;
           var didWarnAboutStateAssignmentForComponent;
           var didWarnAboutUninitializedState;
           var didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate;
@@ -17540,7 +17540,7 @@
       if (true) {
         (function() {
           "use strict";
-          var React = require_react();
+          var React2 = require_react();
           var REACT_ELEMENT_TYPE = Symbol.for("react.element");
           var REACT_PORTAL_TYPE = Symbol.for("react.portal");
           var REACT_FRAGMENT_TYPE = Symbol.for("react.fragment");
@@ -17566,7 +17566,7 @@
             }
             return null;
           }
-          var ReactSharedInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+          var ReactSharedInternals = React2.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
           function error(format) {
             {
               {
@@ -18402,10 +18402,10 @@
             }
           }
           var jsx5 = jsxWithValidationDynamic;
-          var jsxs2 = jsxWithValidationStatic;
+          var jsxs = jsxWithValidationStatic;
           exports.Fragment = REACT_FRAGMENT_TYPE;
           exports.jsx = jsx5;
-          exports.jsxs = jsxs2;
+          exports.jsxs = jsxs;
         })();
       }
     }
@@ -18422,6 +18422,9 @@
       }
     }
   });
+
+  // extensions/gift-checkbox/src/Checkout.jsx
+  var import_react13 = __toESM(require_react());
 
   // node_modules/@remote-ui/rpc/build/esm/memory.mjs
   function isBasicObject(value) {
@@ -19121,17 +19124,11 @@
   // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/extension.mjs
   var extension = createExtensionRegistrationFunction();
 
-  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/BlockLayout/BlockLayout.mjs
-  var BlockLayout = createRemoteComponent("BlockLayout");
+  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/BlockStack/BlockStack.mjs
+  var BlockStack = createRemoteComponent("BlockStack");
 
-  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/Heading/Heading.mjs
-  var Heading = createRemoteComponent("Heading");
-
-  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/Icon/Icon.mjs
-  var Icon = createRemoteComponent("Icon");
-
-  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/InlineLayout/InlineLayout.mjs
-  var InlineLayout = createRemoteComponent("InlineLayout");
+  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/Checkbox/Checkbox.mjs
+  var Checkbox = createRemoteComponent("Checkbox");
 
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/render.mjs
   var import_react6 = __toESM(require_react(), 1);
@@ -19461,20 +19458,14 @@ ${errorInfo.componentStack}`);
     }
   };
 
-  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/BlockLayout/BlockLayout.mjs
-  var BlockLayout2 = createRemoteReactComponent(BlockLayout);
+  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/BlockStack/BlockStack.mjs
+  var BlockStack2 = createRemoteReactComponent(BlockStack);
 
-  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/Heading/Heading.mjs
-  var Heading2 = createRemoteReactComponent(Heading);
-
-  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/Icon/Icon.mjs
-  var Icon2 = createRemoteReactComponent(Icon);
-
-  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/InlineLayout/InlineLayout.mjs
-  var InlineLayout2 = createRemoteReactComponent(InlineLayout);
+  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/Checkbox/Checkbox.mjs
+  var Checkbox2 = createRemoteReactComponent(Checkbox);
 
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/hooks/api.mjs
-  var import_react12 = __toESM(require_react(), 1);
+  var import_react10 = __toESM(require_react(), 1);
 
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/errors.mjs
   var CheckoutUIExtensionError = class extends Error {
@@ -19483,10 +19474,16 @@ ${errorInfo.componentStack}`);
       this.name = "CheckoutUIExtensionError";
     }
   };
+  var ExtensionHasNoMethodError = class extends Error {
+    constructor(method, target) {
+      super(`Cannot call '${method}()' on target '${target}'. The corresponding property was not found on the API.`);
+      this.name = "ExtensionHasNoMethodError";
+    }
+  };
 
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/hooks/api.mjs
   function useApi(_target) {
-    const api = (0, import_react12.useContext)(ExtensionApiContext);
+    const api = (0, import_react10.useContext)(ExtensionApiContext);
     if (api == null) {
       throw new CheckoutUIExtensionError("You can only call this hook when running as a UI extension.");
     }
@@ -19494,10 +19491,10 @@ ${errorInfo.componentStack}`);
   }
 
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/hooks/subscription.mjs
-  var import_react13 = __toESM(require_react(), 1);
+  var import_react11 = __toESM(require_react(), 1);
   function useSubscription(subscription) {
-    const [, setValue] = (0, import_react13.useState)(subscription.current);
-    (0, import_react13.useEffect)(() => {
+    const [, setValue] = (0, import_react11.useState)(subscription.current);
+    (0, import_react11.useEffect)(() => {
       let didUnsubscribe = false;
       const checkForUpdates = (newValue) => {
         if (didUnsubscribe) {
@@ -19515,34 +19512,76 @@ ${errorInfo.componentStack}`);
     return subscription.current;
   }
 
-  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/hooks/settings.mjs
-  function useSettings() {
-    const settings = useSubscription(useApi().settings);
-    return settings;
+  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/hooks/metafields.mjs
+  var import_react12 = __toESM(require_react(), 1);
+  function useMetafields(filters) {
+    const metaFields = useSubscription(useApi().metafields);
+    return (0, import_react12.useMemo)(() => {
+      if (filters) {
+        const {
+          namespace,
+          key
+        } = filters;
+        if (!namespace) {
+          throw new CheckoutUIExtensionError("You must pass in a namespace with a key");
+        }
+        const filteredResults = metaFields.filter((metafield) => metafield.namespace === namespace && (!key || metafield.key === key));
+        return filteredResults;
+      }
+      return metaFields;
+    }, [filters, metaFields]);
+  }
+  function useApplyMetafieldsChange() {
+    const api = useApi();
+    if ("applyMetafieldChange" in api) {
+      return api.applyMetafieldChange;
+    }
+    throw new ExtensionHasNoMethodError("applyMetafieldChange", api.extension.target);
   }
 
-  // extensions/icon-banner/src/Checkout.tsx
+  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/hooks/metafield.mjs
+  function useMetafield(filters) {
+    const {
+      namespace,
+      key
+    } = filters;
+    if (!namespace || !key) {
+      throw new CheckoutUIExtensionError("You must pass in both a namespace and key");
+    }
+    const metafields = useMetafields({
+      namespace,
+      key
+    });
+    return metafields.length ? metafields[0] : void 0;
+  }
+
+  // extensions/gift-checkbox/src/Checkout.jsx
   var import_jsx_runtime4 = __toESM(require_jsx_runtime());
-  var Checkout_default = reactExtension(
-    "purchase.checkout.block.render",
-    () => /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Extension, {})
-  );
+  var Checkout_default = reactExtension("purchase.checkout.block.render", () => /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Extension, {}));
   function Extension() {
-    const { icon_title_1, icon_title_2, icon_title_3, icon_1, icon_2, icon_3 } = useSettings();
-    return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(InlineLayout2, { spacing: "base", columns: ["33.3%", "33.3%", "33.3%"], children: [
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(BlockLayout2, { blockAlignment: "center", inlineAlignment: "center", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Icon2, { source: icon_1, size: "base", appearance: "subdued" }),
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Heading2, { level: 2, children: icon_title_1 })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(BlockLayout2, { blockAlignment: "center", inlineAlignment: "center", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Icon2, { source: icon_2, size: "base", appearance: "subdued" }),
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Heading2, { level: 2, children: icon_title_2 })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(BlockLayout2, { blockAlignment: "center", inlineAlignment: "center", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Icon2, { source: icon_3, size: "base", appearance: "subdued" }),
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Heading2, { level: 2, children: icon_title_3 })
-      ] })
-    ] });
+    const [checked, setChecked] = (0, import_react13.useState)(false);
+    const metafieldNamespace = "custom";
+    const metafieldKey = "isgift";
+    const isgift = useMetafield({
+      namespace: metafieldNamespace,
+      key: metafieldKey
+    });
+    const applyMetafieldsChange = useApplyMetafieldsChange();
+    const handleChange = () => {
+      setChecked(!checked);
+      applyMetafieldsChange({
+        type: "updateMetafield",
+        namespace: metafieldNamespace,
+        key: metafieldKey,
+        valueType: "string",
+        value: "TRUE --- add SKU:'Overbox'"
+      }).then((response) => {
+        console.log("Metafield update response:", response);
+        console.log("Metafield updated successfully");
+      }).catch((error) => {
+        console.error("Error updating metafield:", error);
+      });
+    };
+    return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(BlockStack2, { children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Checkbox2, { checked, onChange: handleChange, children: "Is this a gift?" }) });
   }
 })();
-//# sourceMappingURL=icon-banner.js.map
