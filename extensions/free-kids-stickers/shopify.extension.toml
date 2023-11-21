@@ -1,0 +1,20 @@
+api_version = "2023-10"
+
+[[extensions]]
+handle = "free-kids-stickers"
+name = "Amount off products"
+description = "Free stickers with a kid's clock"
+type = "function"
+
+  [[extensions.targeting]]
+  target = "purchase.product-discount.run"
+  input_query = "src/run.graphql"
+  export = "run"
+
+  [extensions.build]
+  command = ""
+  path = "dist/function.wasm"
+
+  [extensions.ui.paths]
+  create = "/"
+  details = "/"
