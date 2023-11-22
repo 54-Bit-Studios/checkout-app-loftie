@@ -2,7 +2,7 @@ api_version = "2023-10"
 
 [[extensions]]
 handle = "free-kids-stickers"
-name = "Amount off products"
+name = "Free Stickers with Kids Clock"
 description = "Free stickers with a kid's clock"
 type = "function"
 
