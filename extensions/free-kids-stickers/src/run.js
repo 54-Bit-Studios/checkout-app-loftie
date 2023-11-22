@@ -31,10 +31,9 @@ export function run(input) {
   .reduce((sum, line) => sum + line.quantity, 0);
 
   const targets = input.cart.lines
-  // Only include cart lines with a quantity of two or more
-  // and a targetable product variant
   .filter(line => line.merchandise.__typename == "ProductVariant" && line.merchandise.product.id == "gid://shopify/Product/6806537470016" && line.attribute?.value === "Kids Stickers")
   .map(line => {
+    console.log("LINE", JSON.stringify(line));
     const variant = /** @type {ProductVariant} */ (line.merchandise);
     return /** @type {Target} */ ({
       // Use the variant ID to create a discount target
