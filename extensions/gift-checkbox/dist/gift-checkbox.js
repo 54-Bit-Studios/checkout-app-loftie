@@ -19585,3 +19585,4 @@ ${errorInfo.componentStack}`);
     return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(BlockStack2, { children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Checkbox2, { checked, onChange: handleChange, children: "Is this a gift?" }) });
   }
 })();
+//# sourceMappingURL=gift-checkbox.js.map
