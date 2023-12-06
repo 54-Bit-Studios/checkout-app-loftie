@@ -19698,7 +19698,7 @@ ${errorInfo.componentStack}`);
                   ] }),
                   /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(Text2, { children: [
                     "$",
-                    variantData.price.amount
+                    parseFloat(variantData.price.amount).toFixed(2)
                   ] }),
                   /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Text2, { size: "small", children: settings.shipping_insurance_description })
                 ] })
@@ -19710,4 +19710,3 @@ ${errorInfo.componentStack}`);
     ] });
   }
 })();
-//# sourceMappingURL=checkout-upsell-product.js.map

@@ -143,7 +143,7 @@ function Extension() {
           {variantData.product.title} - {variantData.title}
         </Text>
         <Text>
-          ${variantData.price.amount}
+          ${parseFloat(variantData.price.amount).toFixed(2)}
         </Text>
         <Text size="small">
           {settings.shipping_insurance_description}
