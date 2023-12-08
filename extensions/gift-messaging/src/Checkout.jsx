@@ -18,6 +18,7 @@ export default reactExtension(
 function Extension() {
   // Set up the checkbox state
   const [checked, setChecked] = useState(false);
+    const [charCount, setCharCount] = useState(0);
 
   // Define the metafield namespace and key
   const metafieldNamespace = "checkout";
@@ -46,7 +47,7 @@ function Extension() {
       </Checkbox>
       {checked && (
         <TextField
-          label={label}
+          label={`${label} (${250 - charCount} characters left)`}
           multiline={3}
           maxLength={250}
           onChange={(value) => {
@@ -57,6 +58,9 @@ function Extension() {
               valueType: "string",
               value,
             });
+          }}
+          onInput={(value) => {
+            setCharCount(value.length);
           }}
           value={deliveryInstructions?.value}
         />

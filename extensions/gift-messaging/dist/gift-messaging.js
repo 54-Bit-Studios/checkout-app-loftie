@@ -19578,6 +19578,7 @@ ${errorInfo.componentStack}`);
   function Extension() {
     var _a, _b;
     const [checked, setChecked] = (0, import_react14.useState)(false);
+    const [charCount, setCharCount] = (0, import_react14.useState)(0);
     const metafieldNamespace = "checkout";
     const metafieldKey = "gift_messaging";
     const settings = useSettings();
@@ -19596,7 +19597,7 @@ ${errorInfo.componentStack}`);
       checked && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
         TextField2,
         {
-          label,
+          label: `${label} (${250 - charCount} characters left)`,
           multiline: 3,
           maxLength: 250,
           onChange: (value) => {
@@ -19607,6 +19608,9 @@ ${errorInfo.componentStack}`);
               valueType: "string",
               value
             });
+          },
+          onInput: (value) => {
+            setCharCount(value.length);
           },
           value: deliveryInstructions == null ? void 0 : deliveryInstructions.value
         }
