@@ -19581,8 +19581,8 @@ ${errorInfo.componentStack}`);
     const metafieldNamespace = "checkout";
     const metafieldKey = "gift_messaging";
     const settings = useSettings();
-    const header = (_a = settings.gift_messaging_header) != null ? _a : "Would you like to add a gift message";
-    const label = (_b = settings.gift_messaging_label) != null ? _b : "Gift messaging";
+    const header = (_a = settings.gift_messaging_header) != null ? _a : "Would you like to add a gift message?";
+    const label = (_b = settings.gift_messaging_label) != null ? _b : "Gift message";
     const deliveryInstructions = useMetafield({
       namespace: metafieldNamespace,
       key: metafieldKey
@@ -19598,6 +19598,7 @@ ${errorInfo.componentStack}`);
         {
           label,
           multiline: 3,
+          maxLength: 250,
           onChange: (value) => {
             applyMetafieldsChange({
               type: "updateMetafield",

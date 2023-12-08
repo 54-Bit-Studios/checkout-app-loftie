@@ -2,7 +2,7 @@
 
 name = "checkout-app-loftie"
 client_id = "29bad099c5ce55509ecd8a6c53af6b42"
-application_url = "https://templates-session-cw-arising.trycloudflare.com"
+application_url = "https://creator-synthesis-memorial-featuring.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,10 +11,10 @@ scopes = "write_products, write_discounts"
 
 [auth]
 redirect_urls = [
-  "https://templates-session-cw-arising.trycloudflare.com/auth/callback",
-  "https://templates-session-cw-arising.trycloudflare.com/auth/shopify/callback",
-  "https://templates-session-cw-arising.trycloudflare.com/api/auth/callback",
-  "https://templates-session-cw-arising.trycloudflare.com/.shopify/graphiql/auth/callback"
+  "https://creator-synthesis-memorial-featuring.trycloudflare.com/auth/callback",
+  "https://creator-synthesis-memorial-featuring.trycloudflare.com/auth/shopify/callback",
+  "https://creator-synthesis-memorial-featuring.trycloudflare.com/api/auth/callback",
+  "https://creator-synthesis-memorial-featuring.trycloudflare.com/.shopify/graphiql/auth/callback"
 ]
 
 [webhooks]

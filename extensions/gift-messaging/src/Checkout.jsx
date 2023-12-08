@@ -48,6 +48,7 @@ function Extension() {
         <TextField
           label={label}
           multiline={3}
+          maxLength={250}
           onChange={(value) => {
             applyMetafieldsChange({
               type: "updateMetafield",
