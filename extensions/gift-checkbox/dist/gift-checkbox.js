@@ -19560,8 +19560,8 @@ ${errorInfo.componentStack}`);
   var Checkout_default = reactExtension("purchase.checkout.block.render", () => /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Extension, {}));
   function Extension() {
     const [checked, setChecked] = (0, import_react13.useState)(false);
-    const metafieldNamespace = "custom";
-    const metafieldKey = "isgift";
+    const metafieldNamespace = "checkout";
+    const metafieldKey = "is_gift";
     const isgift = useMetafield({
       namespace: metafieldNamespace,
       key: metafieldKey

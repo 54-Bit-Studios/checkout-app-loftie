@@ -1145,7 +1145,7 @@
             var dispatcher = resolveDispatcher();
             return dispatcher.useRef(initialValue);
           }
-          function useEffect3(create, deps) {
+          function useEffect2(create, deps) {
             var dispatcher = resolveDispatcher();
             return dispatcher.useEffect(create, deps);
           }
@@ -1161,7 +1161,7 @@
             var dispatcher = resolveDispatcher();
             return dispatcher.useCallback(callback, deps);
           }
-          function useMemo2(create, deps) {
+          function useMemo3(create, deps) {
             var dispatcher = resolveDispatcher();
             return dispatcher.useMemo(create, deps);
           }
@@ -1927,12 +1927,12 @@
           exports.useContext = useContext3;
           exports.useDebugValue = useDebugValue;
           exports.useDeferredValue = useDeferredValue;
-          exports.useEffect = useEffect3;
+          exports.useEffect = useEffect2;
           exports.useId = useId;
           exports.useImperativeHandle = useImperativeHandle;
           exports.useInsertionEffect = useInsertionEffect;
           exports.useLayoutEffect = useLayoutEffect;
-          exports.useMemo = useMemo2;
+          exports.useMemo = useMemo3;
           exports.useReducer = useReducer;
           exports.useRef = useRef2;
           exports.useState = useState3;
@@ -2429,9 +2429,9 @@
         module.exports = function $$$reconciler($$$hostConfig) {
           var exports2 = {};
           "use strict";
-          var React = require_react();
+          var React2 = require_react();
           var Scheduler = require_scheduler();
-          var ReactSharedInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+          var ReactSharedInternals = React2.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
           var suppressWarning = false;
           function setSuppressWarning(newSuppressWarning) {
             {
@@ -2495,7 +2495,7 @@
           var HostPortal = 4;
           var HostComponent = 5;
           var HostText = 6;
-          var Fragment2 = 7;
+          var Fragment = 7;
           var Mode = 8;
           var ContextConsumer = 9;
           var ContextProvider = 10;
@@ -2635,7 +2635,7 @@
                 return "DehydratedFragment";
               case ForwardRef:
                 return getWrappedName$1(type, type.render, "ForwardRef");
-              case Fragment2:
+              case Fragment:
                 return "Fragment";
               case HostComponent:
                 return type;
@@ -6229,7 +6229,7 @@
             }
           }
           var fakeInternalInstance = {};
-          var emptyRefsObject = new React.Component().refs;
+          var emptyRefsObject = new React2.Component().refs;
           var didWarnAboutStateAssignmentForComponent;
           var didWarnAboutUninitializedState;
           var didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate;
@@ -7053,7 +7053,7 @@
               }
             }
             function updateFragment2(returnFiber, current2, fragment, lanes, key) {
-              if (current2 === null || current2.tag !== Fragment2) {
+              if (current2 === null || current2.tag !== Fragment) {
                 var created = createFiberFromFragment(fragment, returnFiber.mode, lanes, key);
                 created.return = returnFiber;
                 return created;
@@ -7456,7 +7456,7 @@
                 if (child.key === key) {
                   var elementType = element.type;
                   if (elementType === REACT_FRAGMENT_TYPE) {
-                    if (child.tag === Fragment2) {
+                    if (child.tag === Fragment) {
                       deleteRemainingChildren(returnFiber, child.sibling);
                       var existing = useFiber(child, element.props.children);
                       existing.return = returnFiber;
@@ -11633,7 +11633,7 @@
                 var _resolvedProps2 = workInProgress2.elementType === type ? _unresolvedProps2 : resolveDefaultProps(type, _unresolvedProps2);
                 return updateForwardRef(current2, workInProgress2, type, _resolvedProps2, renderLanes2);
               }
-              case Fragment2:
+              case Fragment:
                 return updateFragment(current2, workInProgress2, renderLanes2);
               case Mode:
                 return updateMode(current2, workInProgress2, renderLanes2);
@@ -12074,7 +12074,7 @@
               case SimpleMemoComponent:
               case FunctionComponent:
               case ForwardRef:
-              case Fragment2:
+              case Fragment:
               case Mode:
               case Profiler:
               case ContextConsumer:
@@ -16840,7 +16840,7 @@
             return fiber;
           }
           function createFiberFromFragment(elements, mode, lanes, key) {
-            var fiber = createFiber(Fragment2, elements, key, mode);
+            var fiber = createFiber(Fragment, elements, key, mode);
             fiber.lanes = lanes;
             return fiber;
           }
@@ -17540,7 +17540,7 @@
       if (true) {
         (function() {
           "use strict";
-          var React = require_react();
+          var React2 = require_react();
           var REACT_ELEMENT_TYPE = Symbol.for("react.element");
           var REACT_PORTAL_TYPE = Symbol.for("react.portal");
           var REACT_FRAGMENT_TYPE = Symbol.for("react.fragment");
@@ -17566,7 +17566,7 @@
             }
             return null;
           }
-          var ReactSharedInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+          var ReactSharedInternals = React2.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
           function error(format) {
             {
               {
@@ -18423,6 +18423,9 @@
     }
   });
 
+  // extensions/gift-messaging/src/Checkout.jsx
+  var import_react14 = __toESM(require_react());
+
   // node_modules/@remote-ui/rpc/build/esm/memory.mjs
   function isBasicObject(value) {
     if (value == null || typeof value !== "object")
@@ -19121,32 +19124,14 @@
   // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/extension.mjs
   var extension = createExtensionRegistrationFunction();
 
-  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/BlockSpacer/BlockSpacer.mjs
-  var BlockSpacer = createRemoteComponent("BlockSpacer");
-
   // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/BlockStack/BlockStack.mjs
   var BlockStack = createRemoteComponent("BlockStack");
 
   // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/Checkbox/Checkbox.mjs
   var Checkbox = createRemoteComponent("Checkbox");
 
-  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/Divider/Divider.mjs
-  var Divider = createRemoteComponent("Divider");
-
-  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/Heading/Heading.mjs
-  var Heading = createRemoteComponent("Heading");
-
-  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/Image/Image.mjs
-  var Image = createRemoteComponent("Image");
-
-  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/InlineLayout/InlineLayout.mjs
-  var InlineLayout = createRemoteComponent("InlineLayout");
-
-  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/Pressable/Pressable.mjs
-  var Pressable = createRemoteComponent("Pressable");
-
-  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/Text/Text.mjs
-  var Text = createRemoteComponent("Text");
+  // node_modules/@shopify/ui-extensions/build/esm/surfaces/checkout/components/TextField/TextField.mjs
+  var TextField = createRemoteComponent("TextField");
 
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/render.mjs
   var import_react6 = __toESM(require_react(), 1);
@@ -19476,37 +19461,19 @@ ${errorInfo.componentStack}`);
     }
   };
 
-  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/BlockSpacer/BlockSpacer.mjs
-  var BlockSpacer2 = createRemoteReactComponent(BlockSpacer);
-
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/BlockStack/BlockStack.mjs
   var BlockStack2 = createRemoteReactComponent(BlockStack);
 
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/Checkbox/Checkbox.mjs
   var Checkbox2 = createRemoteReactComponent(Checkbox);
 
-  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/Divider/Divider.mjs
-  var Divider2 = createRemoteReactComponent(Divider);
-
-  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/Heading/Heading.mjs
-  var Heading2 = createRemoteReactComponent(Heading);
-
-  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/Image/Image.mjs
-  var Image2 = createRemoteReactComponent(Image);
-
-  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/InlineLayout/InlineLayout.mjs
-  var InlineLayout2 = createRemoteReactComponent(InlineLayout);
-
-  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/Pressable/Pressable.mjs
-  var Pressable2 = createRemoteReactComponent(Pressable, {
-    fragmentProps: ["overlay"]
+  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/TextField/TextField.mjs
+  var TextField2 = createRemoteReactComponent(TextField, {
+    fragmentProps: ["accessory"]
   });
 
-  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/components/Text/Text.mjs
-  var Text2 = createRemoteReactComponent(Text);
-
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/hooks/api.mjs
-  var import_react17 = __toESM(require_react(), 1);
+  var import_react11 = __toESM(require_react(), 1);
 
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/errors.mjs
   var CheckoutUIExtensionError = class extends Error {
@@ -19524,7 +19491,7 @@ ${errorInfo.componentStack}`);
 
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/hooks/api.mjs
   function useApi(_target) {
-    const api = (0, import_react17.useContext)(ExtensionApiContext);
+    const api = (0, import_react11.useContext)(ExtensionApiContext);
     if (api == null) {
       throw new CheckoutUIExtensionError("You can only call this hook when running as a UI extension.");
     }
@@ -19532,10 +19499,10 @@ ${errorInfo.componentStack}`);
   }
 
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/hooks/subscription.mjs
-  var import_react18 = __toESM(require_react(), 1);
+  var import_react12 = __toESM(require_react(), 1);
   function useSubscription(subscription) {
-    const [, setValue] = (0, import_react18.useState)(subscription.current);
-    (0, import_react18.useEffect)(() => {
+    const [, setValue] = (0, import_react12.useState)(subscription.current);
+    (0, import_react12.useEffect)(() => {
       let didUnsubscribe = false;
       const checkForUpdates = (newValue) => {
         if (didUnsubscribe) {
@@ -19553,19 +19520,47 @@ ${errorInfo.componentStack}`);
     return subscription.current;
   }
 
-  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/hooks/cart-lines.mjs
-  function useCartLines() {
-    const {
-      lines
-    } = useApi();
-    return useSubscription(lines);
+  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/hooks/metafields.mjs
+  var import_react13 = __toESM(require_react(), 1);
+  function useMetafields(filters) {
+    const metaFields = useSubscription(useApi().metafields);
+    return (0, import_react13.useMemo)(() => {
+      if (filters) {
+        const {
+          namespace,
+          key
+        } = filters;
+        if (!namespace) {
+          throw new CheckoutUIExtensionError("You must pass in a namespace with a key");
+        }
+        const filteredResults = metaFields.filter((metafield) => metafield.namespace === namespace && (!key || metafield.key === key));
+        return filteredResults;
+      }
+      return metaFields;
+    }, [filters, metaFields]);
   }
-  function useApplyCartLinesChange() {
+  function useApplyMetafieldsChange() {
     const api = useApi();
-    if ("applyCartLinesChange" in api) {
-      return api.applyCartLinesChange;
+    if ("applyMetafieldChange" in api) {
+      return api.applyMetafieldChange;
     }
-    throw new ExtensionHasNoMethodError("applyCartLinesChange", api.extension.target);
+    throw new ExtensionHasNoMethodError("applyMetafieldChange", api.extension.target);
+  }
+
+  // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/hooks/metafield.mjs
+  function useMetafield(filters) {
+    const {
+      namespace,
+      key
+    } = filters;
+    if (!namespace || !key) {
+      throw new CheckoutUIExtensionError("You must pass in both a namespace and key");
+    }
+    const metafields = useMetafields({
+      namespace,
+      key
+    });
+    return metafields.length ? metafields[0] : void 0;
   }
 
   // node_modules/@shopify/ui-extensions-react/build/esm/surfaces/checkout/hooks/settings.mjs
@@ -19574,140 +19569,48 @@ ${errorInfo.componentStack}`);
     return settings;
   }
 
-  // extensions/checkout-upsell-product/src/Checkout.tsx
-  var import_react19 = __toESM(require_react());
+  // extensions/gift-messaging/src/Checkout.jsx
   var import_jsx_runtime4 = __toESM(require_jsx_runtime());
   var Checkout_default = reactExtension(
     "purchase.checkout.block.render",
     () => /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Extension, {})
   );
   function Extension() {
-    var _a, _b, _c, _d;
-    const { query } = useApi();
-    const [variantData, setVariant] = (0, import_react19.useState)(null);
-    const [isSelected, setIsSelected] = (0, import_react19.useState)(false);
-    const cartLines = useCartLines();
-    const applyCartLineChange = useApplyCartLinesChange();
+    var _a, _b;
+    const [checked, setChecked] = (0, import_react14.useState)(false);
+    const metafieldNamespace = "checkout";
+    const metafieldKey = "gift_messaging";
     const settings = useSettings();
-    const variantId = settings.selected_variant;
-    (0, import_react19.useEffect)(() => {
-      function getVariantData() {
-        return __async(this, null, function* () {
-          const queryResult = yield query(`{
-        node(id: "${variantId}"){
-          ... on ProductVariant {
-            title
-            price {
-              amount
-              currencyCode
-            }
-            image {
-              url
-              altText
-            }
-            product {
-              title
-              featuredImage {
-                url
-                altText
-              }
-            }
-          }
-        }
-      }`);
-          if (queryResult.data) {
-            setVariant(queryResult.data.node);
-          }
-        });
-      }
-      if (variantId) {
-        getVariantData();
-      }
-    }, []);
-    (0, import_react19.useEffect)(() => {
-      var _a2;
-      if (isSelected) {
-        applyCartLineChange({
-          type: "addCartLine",
-          quantity: 1,
-          merchandiseId: variantId
-        });
-      } else {
-        const cartLineId = (_a2 = cartLines.find(
-          (cartLine) => cartLine.merchandise.id === variantId
-        )) == null ? void 0 : _a2.id;
-        if (cartLineId) {
-          applyCartLineChange({
-            type: "removeCartLine",
-            quantity: 1,
-            id: cartLineId
-          });
-        }
-      }
-    }, [isSelected]);
-    if (!variantData)
-      return null;
-    return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(import_jsx_runtime4.Fragment, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Divider2, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
-        BlockSpacer2,
+    const header = (_a = settings.gift_messaging_header) != null ? _a : "Would you like to add a gift message";
+    const label = (_b = settings.gift_messaging_label) != null ? _b : "Gift messaging";
+    const deliveryInstructions = useMetafield({
+      namespace: metafieldNamespace,
+      key: metafieldKey
+    });
+    const applyMetafieldsChange = useApplyMetafieldsChange();
+    const handleChange = () => {
+      setChecked(!checked);
+    };
+    return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(BlockStack2, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Checkbox2, { checked, onChange: handleChange, children: header }),
+      checked && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
+        TextField2,
         {
-          spacing: "base"
-        }
-      ),
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Heading2, { level: 2, children: settings.shipping_insurance_title }),
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
-        BlockSpacer2,
-        {
-          spacing: "base"
-        }
-      ),
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
-        Pressable2,
-        {
-          onPress: () => setIsSelected(!isSelected),
-          children: /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(
-            InlineLayout2,
-            {
-              blockAlignment: "center",
-              spacing: ["base", "base"],
-              columns: ["auto", 80, "fill"],
-              padding: "base",
-              children: [
-                /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
-                  Checkbox2,
-                  {
-                    checked: isSelected
-                  }
-                ),
-                /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
-                  Image2,
-                  {
-                    source: ((_a = variantData.image) == null ? void 0 : _a.url) || ((_b = variantData.product.featuredImage) == null ? void 0 : _b.url),
-                    accessibilityDescription: ((_c = variantData.image) == null ? void 0 : _c.url) || ((_d = variantData.product.featuredImage) == null ? void 0 : _d.altText),
-                    borderRadius: "base",
-                    border: "base",
-                    borderWidth: "base"
-                  }
-                ),
-                /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(BlockStack2, { spacing: "base", children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(Text2, { children: [
-                    variantData.product.title,
-                    " - ",
-                    variantData.title
-                  ] }),
-                  /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(Text2, { children: [
-                    "$",
-                    parseFloat(variantData.price.amount).toFixed(2)
-                  ] }),
-                  /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Text2, { size: "small", children: settings.shipping_insurance_description })
-                ] })
-              ]
-            }
-          )
+          label,
+          multiline: 3,
+          onChange: (value) => {
+            applyMetafieldsChange({
+              type: "updateMetafield",
+              namespace: metafieldNamespace,
+              key: metafieldKey,
+              valueType: "string",
+              value
+            });
+          },
+          value: deliveryInstructions == null ? void 0 : deliveryInstructions.value
         }
       )
     ] });
   }
 })();
-//# sourceMappingURL=checkout-upsell-product.js.map
+//# sourceMappingURL=gift-messaging.js.map
