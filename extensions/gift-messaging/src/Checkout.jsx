@@ -47,9 +47,9 @@ function Extension() {
       </Checkbox>
       {checked && (
         <TextField
-          label={`${label} (${250 - charCount} characters left)`}
+          label={`${label} (${300 - charCount} characters left)`}
           multiline={3}
-          maxLength={250}
+          maxLength={300}
           onChange={(value) => {
             applyMetafieldsChange({
               type: "updateMetafield",
