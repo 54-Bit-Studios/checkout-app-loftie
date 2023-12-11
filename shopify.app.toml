@@ -2,7 +2,7 @@
 
 name = "checkout-app-loftie"
 client_id = "29bad099c5ce55509ecd8a6c53af6b42"
-application_url = "https://choices-rh-reverse-ur.trycloudflare.com"
+application_url = "https://announces-mai-latinas-platform.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,9 +11,9 @@ scopes = "write_products, write_discounts"
 
 [auth]
 redirect_urls = [
-  "https://choices-rh-reverse-ur.trycloudflare.com/auth/callback",
-  "https://choices-rh-reverse-ur.trycloudflare.com/auth/shopify/callback",
-  "https://choices-rh-reverse-ur.trycloudflare.com/api/auth/callback"
+  "https://announces-mai-latinas-platform.trycloudflare.com/auth/callback",
+  "https://announces-mai-latinas-platform.trycloudflare.com/auth/shopify/callback",
+  "https://announces-mai-latinas-platform.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
