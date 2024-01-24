@@ -45,14 +45,14 @@ api_access = true
 
 [extensions.settings]
  [[extensions.settings.fields]]
- key = "shipping_insurance_title"
+ key = "upsell_product_title"
  type = "single_line_text_field"
- name = "Shipping Insurance title"
+ name = "Upsell Product Title"
 
   [[extensions.settings.fields]]
- key = "shipping_insurance_description"
+ key = "upsell_product_description"
  type = "single_line_text_field"
- name = "Shipping Insurance Description text"
+ name = "Upsell Product Description text"
 
  [[extensions.settings.fields]]
  key = "selected_variant"

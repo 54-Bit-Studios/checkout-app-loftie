@@ -46,14 +46,16 @@ interface VariantData {
 function Extension() {
   const { query } = useApi();
 
+  
   const [variantData, setVariant] = useState<null | VariantData>(null)
   const [isSelected, setIsSelected] = useState(false);
-
+  
   const cartLines = useCartLines();
   const applyCartLineChange = useApplyCartLinesChange();
-
+  
   const settings = useSettings();
   const variantId = settings.selected_variant as string;
+  const isVariantInCart = cartLines.some(cartLine => cartLine.merchandise.id === variantId);
 
   useEffect(() => {
     async function getVariantData(){
@@ -87,15 +89,15 @@ function Extension() {
     if(variantId) {
       getVariantData();
     }
-  }, []);
+  }, [variantId]);
 
   useEffect(() => {
-    if(isSelected) {
+    if (isSelected) {
       applyCartLineChange({
         type: "addCartLine",
         quantity: 1,
         merchandiseId: variantId
-      })
+      });
     } else {
       const cartLineId = cartLines.find(
         cartLine => cartLine.merchandise.id === variantId
@@ -109,9 +111,22 @@ function Extension() {
         })
       }
     }
-  }, [isSelected])
+  }, [isSelected, variantId]);
 
-  if(!variantData) return null;
+  useEffect(() => {
+    if (!isSelected) {
+      const cartLineId = cartLines.find(cartLine => cartLine.merchandise.id === variantId)?.id;
+      if (cartLineId) {
+        applyCartLineChange({
+          type: "removeCartLine",
+          quantity: 1,
+          id: cartLineId
+        });
+      }
+    }
+  }, [cartLines]); // Depend onl
+
+  if (!variantData || (isVariantInCart && parseFloat(variantData.price.amount).toFixed(2) == "0.00" )) return null;
 
   return (
     <>
@@ -119,7 +134,7 @@ function Extension() {
     <BlockSpacer
     spacing={"base"}/>
     <Heading level={2}>
-      {settings.shipping_insurance_title}
+      {settings.upsell_product_title}
     </Heading>
     <BlockSpacer
     spacing={"base"}/>
@@ -146,7 +161,7 @@ function Extension() {
           ${parseFloat(variantData.price.amount).toFixed(2)}
         </Text>
         <Text size="small">
-          {settings.shipping_insurance_description}
+          {settings.upsell_product_description}
         </Text>
       </BlockStack>
     </InlineLayout>
