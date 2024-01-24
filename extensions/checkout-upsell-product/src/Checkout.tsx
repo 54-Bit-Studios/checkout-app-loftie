@@ -124,9 +124,20 @@ function Extension() {
         });
       }
     }
-  }, [cartLines]); // Depend onl
+  }, [cartLines]);
 
-  if (!variantData || (isVariantInCart && parseFloat(variantData.price.amount).toFixed(2) == "0.00" )) return null;
+  useEffect(() => {
+    if (cartLines.length === 1 && cartLines[0].merchandise.id === variantId) {
+      const cartLineId = cartLines[0].id;
+      applyCartLineChange({
+        type: "removeCartLine",
+        quantity: 1,
+        id: cartLineId
+      });
+    }
+  }, [cartLines, variantId]);
+
+  if (!variantData || (isVariantInCart && parseFloat(variantData.price.amount).toFixed(2) == "0.00" ) || cartLines.length === 0) return null;
 
   return (
     <>
