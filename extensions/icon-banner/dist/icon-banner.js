@@ -19532,15 +19532,15 @@ ${errorInfo.componentStack}`);
     return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(InlineLayout2, { spacing: "base", columns: ["33.3%", "33.3%", "33.3%"], children: [
       /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(BlockLayout2, { blockAlignment: "center", inlineAlignment: "center", children: [
         /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Icon2, { source: icon_1, size: "base", appearance: "subdued" }),
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Heading2, { level: 2, children: icon_title_1 })
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Heading2, { level: 2, inlineAlignment: "center", children: icon_title_1 })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(BlockLayout2, { blockAlignment: "center", inlineAlignment: "center", children: [
         /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Icon2, { source: icon_2, size: "base", appearance: "subdued" }),
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Heading2, { level: 2, children: icon_title_2 })
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Heading2, { level: 2, inlineAlignment: "center", children: icon_title_2 })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(BlockLayout2, { blockAlignment: "center", inlineAlignment: "center", children: [
         /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Icon2, { source: icon_3, size: "base", appearance: "subdued" }),
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Heading2, { level: 2, children: icon_title_3 })
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Heading2, { level: 2, inlineAlignment: "center", children: icon_title_3 })
       ] })
     ] });
   }
